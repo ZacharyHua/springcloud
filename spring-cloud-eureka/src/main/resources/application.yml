@@ -22,10 +22,14 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://localhost:10000/eureka/,http://localhost:10001/eureka/,http://localhost:10002/eureka/
+#      defaultZone: http://localhost:10000/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 0
     enable-self-preservation: true
     peer-eureka-nodes-update-interval-ms: 10000
+
+
+
 
 
 ---

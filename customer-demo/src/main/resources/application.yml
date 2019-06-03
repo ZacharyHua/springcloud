@@ -7,7 +7,30 @@ spring:
 
 
 
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10000/eureka/,http://127.0.0.1:10001/eureka/,http://127.0.0.1:10002/eureka/
+#    register-with-eureka: false
+#    fetch-registry: false
+
+##1:定义一个serverlist给我们使用负载均衡
+##格式{servcid}:ribbon:listOfServers
+
 eureka:
   client:
-    service-url:
-      defaultZone: http://127.0.0.1:10000/eureka/
+    enabled: false
+
+hello-server:
+  ribbon:
+    listOfServers: localhost:8001,localhost:8002
+
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        cloud: debug
+#    com:
+#      netflix: debug
+
