@@ -22,20 +22,21 @@ public class CustomerDemoApplication {
         SpringApplication.run(CustomerDemoApplication.class, args);
     }
 
-    @Bean
-    public RestTemplate template(){
-        return new RestTemplate();
-    }
-
 //    @Bean
-//    @LoadBalanced
 //    public RestTemplate template(){
 //        return new RestTemplate();
 //    }
 
     @Bean
-    public IRule ribbonRule(){
-        //自定义规则
-        return new RandomRule();
+    @LoadBalanced
+    public RestTemplate template(){
+        return new RestTemplate();
     }
+
+//    @Bean
+//    public IRule ribbonRule(){
+//        //自定义规则
+//        return new RandomRule();
+//    }
+
 }

@@ -17,10 +17,11 @@ public class CustomerController {
 
     @GetMapping("index")
     public Object getIndex(){
-        ServiceInstance serviceInstance = loadBalancerClient.choose("hello-server");
-        String ip = serviceInstance.getHost();
-        int port = serviceInstance.getPort();
-        return restTemplate.getForObject("http://"+ip+":"+port,String.class,"");
+//        ServiceInstance serviceInstance = loadBalancerClient.choose("hello-server");
+//        String ip = serviceInstance.getHost();
+//        int port = serviceInstance.getPort();
+//        return restTemplate.getForObject("http://"+ip+":"+port,String.class,"");
+        return restTemplate.getForObject("http://hello-server",String.class,"");
     }
 
 //    @GetMapping("index")
