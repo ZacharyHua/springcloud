@@ -21,7 +21,6 @@ public class CustomerController {
         String ip = serviceInstance.getHost();
         int port = serviceInstance.getPort();
         return restTemplate.getForObject("http://"+ip+":"+port,String.class,"");
-
     }
 
 //    @GetMapping("index")

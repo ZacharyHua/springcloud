@@ -23,7 +23,6 @@ public class CustomerDemoApplication {
     }
 
     @Bean
-    @LoadBalanced
     public RestTemplate template(){
         return new RestTemplate();
     }
