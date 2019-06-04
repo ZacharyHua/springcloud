@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @RibbonClients(
         @RibbonClient(value = "hello-server")
 )
-public class CustomerDemoApplication {
+public class    CustomerDemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CustomerDemoApplication.class, args);
