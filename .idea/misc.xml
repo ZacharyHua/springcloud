@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/hello-demo-peer1/pom.xml" />
         <option value="$PROJECT_DIR$/hello-demo-peer2/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-hystrix/pom.xml" />
       </list>
     </option>
   </component>
