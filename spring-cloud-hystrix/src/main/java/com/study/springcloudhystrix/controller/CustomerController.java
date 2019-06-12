@@ -19,10 +19,10 @@ public class CustomerController {
     @Autowired
     LoadBalancerClient loadBalancerClient;
 
-    @GetMapping("index")
-    public Object getIndex() throws InterruptedException {
-        return new CustomerCommand(restTemplate).execute();
-    }
+        @GetMapping("index")
+        public Object getIndex() throws InterruptedException {
+            return new CustomerCommand(restTemplate).execute();
+        }
     @HystrixCommand(
             fallbackMethod = "callTimeoutFallback",
             threadPoolProperties = {
