@@ -12,6 +12,8 @@
         <module name="hello-demo-peer1" />
         <module name="spring-cloud-hystrix" />
         <module name="customer-demo" />
+        <module name="user-demo" />
+        <module name="spring-cloud-zuul" />
         <module name="spring-cloud-feign" />
         <module name="spring-cloud-eureka" />
       </profile>
@@ -25,6 +27,8 @@
       <module name="spring-cloud-feign" target="1.8" />
       <module name="spring-cloud-hystrix" target="1.8" />
       <module name="spring-cloud-hystrix-dashboard" target="1.8" />
+      <module name="spring-cloud-zuul" target="1.8" />
+      <module name="user-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -37,6 +41,8 @@
       <module name="spring-cloud-feign" options="-parameters" />
       <module name="spring-cloud-hystrix" options="-parameters" />
       <module name="spring-cloud-hystrix-dashboard" options="-parameters" />
+      <module name="spring-cloud-zuul" options="-parameters" />
+      <module name="user-demo" options="-parameters" />
     </option>
   </component>
 </project>

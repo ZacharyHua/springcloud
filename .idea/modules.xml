@@ -10,7 +10,9 @@
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign.iml" filepath="$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-hystrix/spring-cloud-hystrix.iml" filepath="$PROJECT_DIR$/spring-cloud-hystrix/spring-cloud-hystrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-hystrix-dashboard/spring-cloud-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/spring-cloud-hystrix-dashboard/spring-cloud-hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-zuul/spring-cloud-zuul.iml" filepath="$PROJECT_DIR$/spring-cloud-zuul/spring-cloud-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springcloud.iml" filepath="$PROJECT_DIR$/.idea/springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-demo/user-demo.iml" filepath="$PROJECT_DIR$/user-demo/user-demo.iml" />
     </modules>
   </component>
 </project>
