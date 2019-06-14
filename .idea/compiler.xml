@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-feign" />
         <module name="spring-cloud-hystrix-dashboard" />
         <module name="hello-demo-peer2" />
         <module name="hello-demo-peer1" />
@@ -19,6 +20,7 @@
       <module name="hello-demo-peer1" target="1.8" />
       <module name="hello-demo-peer2" target="1.8" />
       <module name="spring-cloud-eureka" target="1.8" />
+      <module name="spring-cloud-feign" target="1.8" />
       <module name="spring-cloud-hystrix" target="1.8" />
       <module name="spring-cloud-hystrix-dashboard" target="1.8" />
     </bytecodeTargetLevel>
@@ -29,6 +31,7 @@
       <module name="hello-demo-peer1" options="-parameters" />
       <module name="hello-demo-peer2" options="-parameters" />
       <module name="spring-cloud-eureka" options="-parameters" />
+      <module name="spring-cloud-feign" options="-parameters" />
       <module name="spring-cloud-hystrix" options="-parameters" />
       <module name="spring-cloud-hystrix-dashboard" options="-parameters" />
     </option>

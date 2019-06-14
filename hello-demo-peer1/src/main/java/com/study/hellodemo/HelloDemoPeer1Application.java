@@ -22,7 +22,7 @@ public class HelloDemoPeer1Application {
         Random random = new Random();
         int timeOut = random.nextInt(150);
         System.out.println("当前线程休眠时间是："+timeOut);
-        Thread.sleep(timeOut);
+//        Thread.sleep(timeOut);
         String str = "这是服务端1返回的应答";
         return new String(str);
     }
