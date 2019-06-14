@@ -6,17 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-cloud-feign" />
+        <module name="defined-fegin" />
         <module name="spring-cloud-hystrix-dashboard" />
         <module name="hello-demo-peer2" />
         <module name="hello-demo-peer1" />
         <module name="spring-cloud-hystrix" />
         <module name="customer-demo" />
+        <module name="spring-cloud-feign" />
         <module name="spring-cloud-eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="customer-demo" target="1.8" />
+      <module name="defined-fegin" target="1.8" />
       <module name="hello-demo-peer1" target="1.8" />
       <module name="hello-demo-peer2" target="1.8" />
       <module name="spring-cloud-eureka" target="1.8" />
@@ -28,6 +30,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="customer-demo" options="-parameters" />
+      <module name="defined-fegin" options="-parameters" />
       <module name="hello-demo-peer1" options="-parameters" />
       <module name="hello-demo-peer2" options="-parameters" />
       <module name="spring-cloud-eureka" options="-parameters" />

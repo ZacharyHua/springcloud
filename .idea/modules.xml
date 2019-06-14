@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/customer-demo/customer-demo.iml" filepath="$PROJECT_DIR$/customer-demo/customer-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/defined-fegin/defined-fegin.iml" filepath="$PROJECT_DIR$/defined-fegin/defined-fegin.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-demo-peer1/hello-demo-peer1.iml" filepath="$PROJECT_DIR$/hello-demo-peer1/hello-demo-peer1.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-demo-peer2/hello-demo-peer2.iml" filepath="$PROJECT_DIR$/hello-demo-peer2/hello-demo-peer2.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-eureka/spring-cloud-eureka.iml" filepath="$PROJECT_DIR$/spring-cloud-eureka/spring-cloud-eureka.iml" />
