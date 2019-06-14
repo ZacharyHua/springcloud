@@ -38,23 +38,23 @@ zuul:
       path: /token/byPhone
       serviceId: user-demo
 
-#stduy:
-#  zuul:
-#    token-filter:
-#      noAuthenticationRoutes: user-token
-#
-#
-#token:
-#  jwt:
-#    key: study123
-#    iss: 11
-#    expm: 10
-#
-#hystix:
-#  command:
-#    execution:
-#      timeout:
-#        enabled: true
-#      isolation:
-#        thread:
-#          timeoutInmilliseconds: 100
+stduy:
+  zuul:
+    token-filter:
+      noAuthenticationRoutes: user-token
+
+
+token:
+  jwt:
+    key: study123
+    iss: 11
+    expm: 10
+
+hystix:
+  command:
+    execution:
+      timeout:
+        enabled: true
+      isolation:
+        thread:
+          timeoutInmilliseconds: 100
