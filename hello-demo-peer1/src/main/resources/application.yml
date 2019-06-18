@@ -1,7 +1,5 @@
 server:
   port: 8001
-
-
 spring:
   rabbitmq:
     host: 47.111.175.146

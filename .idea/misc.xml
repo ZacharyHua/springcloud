@@ -6,7 +6,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/customer-demo/pom.xml" />
         <option value="$PROJECT_DIR$/hello-demo-peer1/pom.xml" />
         <option value="$PROJECT_DIR$/hello-demo-peer2/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-eureka/pom.xml" />
@@ -17,6 +16,7 @@
         <option value="$PROJECT_DIR$/spring-cloud-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/user-demo/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-stream/pom.xml" />
+        <option value="$PROJECT_DIR$/customer-demo/pom.xml" />
       </list>
     </option>
   </component>

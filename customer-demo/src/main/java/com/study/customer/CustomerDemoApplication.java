@@ -27,6 +27,8 @@ import org.springframework.web.client.RestTemplate;
 public class CustomerDemoApplication {
 
     public static void main(String[] args) {
+
+//        SpringApplication.run(CustomerDemoApplication.class, args);
         ConfigurableApplicationContext context = SpringApplication.run(CustomerDemoApplication.class);
         BusProperties busProperties = context.getBean(BusProperties.class);
         context.publishEvent(new MyEvent("这是SpringCloud-Bus 事件发布机制",busProperties.getId()));
