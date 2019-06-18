@@ -3,9 +3,9 @@ package com.study.hellodemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
 import java.util.Random;
 
 @SpringBootApplication
@@ -26,4 +26,15 @@ public class HelloDemoPeer1Application {
         String str = "这是服务端1返回的应答";
         return new String(str);
     }
+
+    @GetMapping("user")
+    public String getName(@RequestParam("name") String name){
+        return name;
+    }
+
+    @PostMapping("/find-user")
+    public String getName(@RequestBody Map<String,Object> map){
+        return (String) map.get("name");
+    }
+
 }
