@@ -1,0 +1,17 @@
+server:
+  port: 5001
+
+
+spring:
+  application:
+    name: comfig-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: D:\idea-project\springcloud\spring-cloud-config-server\src\main\resources\configs
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

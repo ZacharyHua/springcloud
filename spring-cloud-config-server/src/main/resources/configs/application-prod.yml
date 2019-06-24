@@ -1,0 +1,43 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: helloserver
+  cloud:
+    bus:
+      destination: bus-q
+      trace:
+        enabled: true
+    stream:
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+                publisher-confirms: true
+      bindings:
+        myInput:
+          binder: rabbit1
+          destination: things1
+        myOutput:
+          binder: rabbit1
+          destination: things1
+        springCloudBusOutput:
+          binder: rabbit1
+        springCloudBusInput:
+          binder: rabbit1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10000/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
