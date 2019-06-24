@@ -56,3 +56,8 @@ logging:
     com:
       netflix: debug
 
+
+ribbon:
+  eureka:
+    enabled: false
+

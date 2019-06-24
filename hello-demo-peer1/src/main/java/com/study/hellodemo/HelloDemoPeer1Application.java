@@ -22,7 +22,7 @@ import java.util.Random;
 @EnableEurekaClient
 @RestController
 @EnableBinding(value = {StreamClient.class})
-@RemoteApplicationEventScan("com.dn")
+@RemoteApplicationEventScan("com.study")
 public class HelloDemoPeer1Application {
 
     public static void main(String[] args) {

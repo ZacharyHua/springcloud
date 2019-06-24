@@ -1,6 +1,6 @@
 package com.study.springcloudfeign.fallback;
 
-import com.study.springcloudfeign.server.HelloDemoService;
+import com.study.springcloudfeign.service.HelloDemoService;
 import org.springframework.stereotype.Component;
 
 @Component

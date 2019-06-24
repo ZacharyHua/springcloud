@@ -30,9 +30,10 @@ public class CustomerController {
         streamClient.output().send(new GenericMessage("已经发送了一个请求，请处理"));
 
 
-        ServiceInstance serviceInstance = loadBalancerClient.choose("helloserver");
-        String ip = serviceInstance.getHost();
-        int port = serviceInstance.getPort();
+//        ServiceInstance serviceInstance = loadBalancerClient.choose("helloserver");
+//        String ip = serviceInstance.getHost();
+//        int port = serviceInstance.getPort();
+//        System.out.println(ip+port);
         return restTemplate.getForObject("http://helloserver",String.class,"");
      }
 

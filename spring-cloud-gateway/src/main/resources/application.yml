@@ -1,0 +1,35 @@
+
+#如果我们用服务id去进行访问,那么请求地址用 http:网关地址/serviceId/具体的url
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka
+
+
+server:
+  port: 6000
+
+logging:
+  level:
+    root: WARN
+    org.springframework: INFO
+    org.springframework.cloud: DEBUG
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+#  http://localhost:6000/FEIGN-DEMO/index
+#      routes:
+#      - id: study
+#        uri: http://www.baidu.com
+#        predicates:
+#        - Path=/index   # 匹配以 有index 的 访问路径
+#        - Query=paramA  # 需要带这个参数才会被通过
+#        - Before=2019-07-20T17:42:47.789-07:00[America/Denver]
+#        filtes:
+#          - JwtCheckSSSS
