@@ -1,12 +1,7 @@
 #server:
-#  port: 8007
+#  port: 8001
 #
-#logging:
-#  level:
-#    root: WARN
-#    org.springframework: INFO
-#    org.springframework.cloud: INFO
-#    org.springframework.interation: INFO
+#
 #
 #spring:
 #  rabbitmq:
@@ -14,15 +9,18 @@
 #    port: 5672
 #    username: admin
 #    password: admin
-#    # 重要，开启消息确认机制
-#    publisher-confirms: true
+##    publisher-confirms: true
+#  application:
+#    name: helloserver
 #  cloud:
+#    bus:
+#      destination: bus-q
+#      trace:
+#        enabled: true
 #    stream:
 #      binders:
 #        rabbit1:
-#          # 会在META-INF/spring.binders文件里面找对应的配置
 #          type: rabbit
-#          # 为这个binder单独指定spring的相关配置
 #          environment:
 #            spring:
 #              rabbitmq:
@@ -30,39 +28,44 @@
 #                port: 5672
 #                username: admin
 #                password: admin
-#                # 重要！  开启消息发送确认机制
 #                publisher-confirms: true
 #      bindings:
-#        input:
+#        myInput:
 #          binder: rabbit1
 #          destination: things1
-#        output:
+#        myOutput:
 #          binder: rabbit1
 #          destination: things1
+#        springCloudBusOutput:
+#          binder: rabbit1
+#        springCloudBusInput:
+#          binder: rabbit1
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10000/eureka/
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
 
 
 server:
-  port: 8007
-logging:
-  level:
-    root: WARN
-    org.springframework: INFO
-    org.springframework.cloud: INFO
-    org.springframework.interation: INFO
+  port: 8001
 spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-
-    publisher-confirms: true
+  application:
+    name: helloserver
   cloud:
+    bus:
+      destination: bus-q
+      trace:
+        enabled: true
     stream:
       binders:
         rabbit1:
           type: rabbit
-
           environment:
             spring:
               rabbitmq:
@@ -70,12 +73,25 @@ spring:
                 port: 5672
                 username: guest
                 password: guest
-
                 publisher-confirms: true
       bindings:
-        input:
+        myInput:
           binder: rabbit1
           destination: things1
-        output:
+        myOutput:
           binder: rabbit1
           destination: things1
+        springCloudBusOutput:
+          binder: rabbit1
+        springCloudBusInput:
+          binder: rabbit1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10000/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

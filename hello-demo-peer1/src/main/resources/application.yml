@@ -1,12 +1,6 @@
 server:
   port: 8001
 spring:
-  rabbitmq:
-    host: 47.111.175.146
-    port: 5672
-    username: admin
-    password: admin
-    publisher-confirms: true
   application:
     name: helloserver
   cloud:
@@ -21,10 +15,10 @@ spring:
           environment:
             spring:
               rabbitmq:
-                host: 47.111.175.146
+                host: localhost
                 port: 5672
-                username: admin
-                password: admin
+                username: guest
+                password: guest
                 publisher-confirms: true
       bindings:
         myInput:

@@ -1,0 +1,127 @@
+#server:
+#  port: 8083
+#
+#
+#
+#spring:
+#  application:
+#    name: consumer-demo
+#  rabbitmq:
+#    host: 47.111.175.146
+#    port: 5672
+#    username: admin
+#    password: admin
+#    # 重要，开启消息确认机制
+#    publisher-confirms: true
+#  cloud:
+#    bus:
+#      destination: bus-q
+#      trace:
+#        enabled: true
+#    stream:
+#      binders:
+#        rabbit1:
+#          type: rabbit
+#          environment:
+#            spring:
+#              rabbitmq:
+#                host: 47.111.175.146
+#                port: 5672
+#                username: admin
+#                password: admin
+#                publisher-confirms: true
+#      bindings:
+#        myInput:
+#          binder: rabbit1
+#          destination: things1
+#        myOutput:
+#          binder: rabbit1
+#          destination: things1
+#          ###添加bus的通道配置
+#        springCloudBusOutput:
+#          binder: rabbit1
+#        springCloudBusInput:
+#          binder: rabbit1
+#
+#
+###改造配置
+#eureka:
+#  client:
+#    enabled: false
+#
+#
+###1:定义一个serverlist给我们使用负载均衡
+###格式{servcid}:ribbon:listOfServers
+#hello-server:
+#  ribbon:
+#    listOfServers: localhost:8001,localhost:8002
+#
+#
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        cloud: debug
+#    com:
+#      netflix: debug
+#
+
+
+server:
+  port: 8083
+
+spring:
+  application:
+    name: consumer-demo
+  cloud:
+    bus:
+      destination: bus-q
+      trace:
+        enabled: true
+    stream:
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+                publisher-confirms: true
+      bindings:
+        myInput:
+          binder: rabbit1
+          destination: things1
+        myOutput:
+          binder: rabbit1
+          destination: things1
+          ###添加bus的通道配置
+        springCloudBusOutput:
+          binder: rabbit1
+        springCloudBusInput:
+          binder: rabbit1
+
+
+##改造配置
+eureka:
+  client:
+    enabled: false
+
+
+##1:定义一个serverlist给我们使用负载均衡
+##格式{servcid}:ribbon:listOfServers
+hello-server:
+  ribbon:
+    listOfServers: localhost:8001,localhost:8002
+
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud: debug
+    com:
+      netflix: debug
+

@@ -1,18 +1,9 @@
 server:
   port: 8083
 
-
-
 spring:
   application:
     name: consumer-demo
-  rabbitmq:
-    host: 47.111.175.146
-    port: 5672
-    username: admin
-    password: admin
-    # 重要，开启消息确认机制
-    publisher-confirms: true
   cloud:
     bus:
       destination: bus-q
@@ -25,10 +16,10 @@ spring:
           environment:
             spring:
               rabbitmq:
-                host: 47.111.175.146
+                host: localhost
                 port: 5672
-                username: admin
-                password: admin
+                username: guest
+                password: guest
                 publisher-confirms: true
       bindings:
         myInput:

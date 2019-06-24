@@ -1,6 +1,6 @@
-package com.study.hellodemo.listener;
+package com.study.customer.listener;
 
-import com.study.hellodemo.event.MyEvent;
+import com.study.customer.event.MyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
