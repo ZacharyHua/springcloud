@@ -4,14 +4,28 @@ server:
 
 spring:
   application:
-    name: comfig-server
+    name: config-server
   cloud:
     config:
       server:
         git:
-          uri: D:\idea-project\springcloud\spring-cloud-config-server\src\main\resources\configs
+          uri: https://github.com/ZacharyHua/spring-cloud-config.git
+#  security:
+#    user:
+#      name: user
+#      password: 123456
+        encrypt:
+          enabled: true   # 在此处添加加密和解密的过程
+
+
+
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+eureka:
+  client:
+    service-url:
+      defaultZone : http://127.0.0.1:10000/eureka/
